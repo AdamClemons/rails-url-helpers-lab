@@ -1,5 +1,6 @@
 require 'byebug'
 require 'rails_helper'
+require 'pry'
 
 describe 'Route to view' do
   it 'has an index page' do
@@ -24,6 +25,7 @@ describe 'Show page' do
   end
 
   it 'renders properly' do
+    # binding.pry
     visit student_path(@student)
     expect(page.status_code).to eq(200)
   end
